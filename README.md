@@ -1,10 +1,15 @@
 ### GruntJS TS compilation
-- flush `build/` archives & compile `.ts` files under `src/`
+- flush `build/` archives, compile `.ts` files under `src/`, and run specs
 ```
 grunt
 ```
+- run all the compiled specs [optional]
+```
+grunt run:commands
+```
+<img src="https://i.imgur.com/VRlM5gr.png" width="40%" height="40%">
 
-### Default TS compilation
+### Default TS compilation [optional]
 
 - compile all `.ts/.tsx` files through `tsconfig.json`
 ```
@@ -15,9 +20,7 @@ tsc
 tsc src/specs/frisby_status.spec.ts --outDir build/
 ```
 
-### Test execution
+- test execution
 ```
 npm test build/
 ```
-
-<img src="https://i.imgur.com/VRlM5gr.png" width="40%" height="40%">

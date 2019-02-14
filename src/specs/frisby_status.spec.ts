@@ -3,7 +3,14 @@ import * as frisby from 'frisby';
 describe('Test Case 1', () => {
     it('should be status 200', (done) => {
         frisby.get('https://reqres.in/api/users?page=2')
-            .expect('status', 200)
+            .inspectResponse() // complete response
+            .inspectBody() // reponse body
+            .inspectJSON() // print response in json format
+            .inspectStatus() // check status
+            .inspectHeaders()
+            .inspectRequest()
+            .inspectRequestHeaders() // request headers
+            .expect('status', 200) // assert status 200
             .done(done);
     });
 

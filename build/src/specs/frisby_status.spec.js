@@ -11,6 +11,10 @@ var frisby = __importStar(require("frisby"));
 describe('Test Case 1', function () {
     it('should be status 200', function (done) {
         frisby.get('https://reqres.in/api/users?page=2')
+            .inspectStatus()
+            .inspectHeaders()
+            .inspectRequest()
+            .inspectRequestHeaders()
             .expect('status', 200)
             .done(done);
     });
