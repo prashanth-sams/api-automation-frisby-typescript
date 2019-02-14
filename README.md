@@ -1,4 +1,10 @@
-### TypeScript compilation
+### GruntJS TS compilation
+
+```
+grunt
+```
+
+### Default TS compilation
 
 - ###### compile all ts files through `tsconfig.json`
 ```
@@ -14,4 +20,4 @@ tsc src/specs/frisby_status.spec.ts --outDir build/
 npm test build/
 ```
 
-<img src="https://i.imgur.com/VRlM5gr.png" width="60%" height="100%">
+<img src="https://i.imgur.com/VRlM5gr.png" width="40%" height="40%">
