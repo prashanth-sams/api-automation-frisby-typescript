@@ -6,10 +6,12 @@ tsc
 ```
 - ###### compile specific ts file
 ```
-tsc src/specs/demo.spec.ts --outDir build/
+tsc src/specs/frisby_status.spec.ts --outDir build/
 ```
 
 ### Test execution
 ```
 npm test build/
 ```
+
+<img src="https://i.imgur.com/VRlM5gr.png" width="60%" height="100%">
