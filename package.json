@@ -1,7 +1,7 @@
 {
-  "name": "api-chai",
+  "name": "api-automation-frisby-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "write & run api tests using frisby",
   "main": "index.js",
   "dependencies": {
     "@types/frisby": "^2.0.4",
@@ -12,13 +12,17 @@
     "@types/jest-diff": "^20.0.1",
     "@types/joi": "^14.3.1",
     "@types/node-fetch": "^2.1.6",
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.3.2",
+    "grunt-ts": "^6.0.0-beta.22",
     "jest": "^24.1.0",
     "jest-diff": "^24.0.0",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3"
   },
   "scripts": {
-    "test": "node ./node_modules/jest/node_modules/.bin/jest"
+    "test": "node ./node_modules/jest/node_modules/.bin/jest",
+    "build": "grunt"
   },
   "author": "Prashanth Sams",
   "license": "ISC"

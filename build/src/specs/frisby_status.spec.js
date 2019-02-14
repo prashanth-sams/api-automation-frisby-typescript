@@ -8,10 +8,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var frisby = __importStar(require("frisby"));
-describe('Test Suite 1', function () {
-    it('should be a teapot get', function (done) {
+describe('Test Case 1', function () {
+    it('should be status 200', function (done) {
         frisby.get('https://reqres.in/api/users?page=2')
             .expect('status', 200)
+            .done(done);
+    });
+    it('should be status 404', function (done) {
+        frisby.get('https://reqres.in/api/users/23')
+            .expect('status', 404)
             .done(done);
     });
 });
