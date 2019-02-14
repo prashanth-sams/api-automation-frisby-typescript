@@ -3,6 +3,7 @@ import * as frisby from 'frisby';
 describe('Test Case 1', () => {
     it('should be status 200', (done) => {
         frisby.get('https://reqres.in/api/users?page=2')
+            .expect('status', 200)
             .inspectResponse() // complete response
             .inspectBody() // reponse body
             .inspectJSON() // print response in json format
@@ -11,11 +12,8 @@ describe('Test Case 1', () => {
             .inspectRequest()
             .inspectRequestHeaders() // request headers
             .expect('status', 200) // assert status 200
-<<<<<<< HEAD
-=======
-            .expect('json','page', 2) // assert body values
-            // .expect('jsonTypes','page', 2) // assert inner body values
->>>>>>> grunt run, get response details
+            .expect('json','page', 2) // assert response body values
+            // .expect('jsonTypes','page.*', 2) // assert inner response body values
             .done(done);
     });
 

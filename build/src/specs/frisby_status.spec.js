@@ -11,16 +11,16 @@ var frisby = __importStar(require("frisby"));
 describe('Test Case 1', function () {
     it('should be status 200', function (done) {
         frisby.get('https://reqres.in/api/users?page=2')
-<<<<<<< HEAD
+            .expect('status', 200)
+            .inspectResponse()
+            .inspectBody()
+            .inspectJSON()
             .inspectStatus()
             .inspectHeaders()
             .inspectRequest()
             .inspectRequestHeaders()
-=======
-            .inspectJSON()
->>>>>>> grunt run, get response details
             .expect('status', 200)
-            .expect('json', 'page', 3)
+            .expect('json', 'page', 2)
             .done(done);
     });
     it('should be status 404', function (done) {
