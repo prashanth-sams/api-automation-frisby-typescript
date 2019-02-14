@@ -11,6 +11,11 @@ describe('Test Case 1', () => {
             .inspectRequest()
             .inspectRequestHeaders() // request headers
             .expect('status', 200) // assert status 200
+<<<<<<< HEAD
+=======
+            .expect('json','page', 2) // assert body values
+            // .expect('jsonTypes','page', 2) // assert inner body values
+>>>>>>> grunt run, get response details
             .done(done);
     });
 
