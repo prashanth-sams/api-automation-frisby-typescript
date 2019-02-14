@@ -1,16 +1,16 @@
 ### GruntJS TS compilation
-
+- flush `build/` archives & compile `.ts` files under `src/`
 ```
 grunt
 ```
 
 ### Default TS compilation
 
-- ###### compile all ts files through `tsconfig.json`
+- compile all `.ts/.tsx` files through `tsconfig.json`
 ```
 tsc
 ```
-- ###### compile specific ts file
+- compile specific `ts` file
 ```
 tsc src/specs/frisby_status.spec.ts --outDir build/
 ```
