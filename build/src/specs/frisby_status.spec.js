@@ -8,6 +8,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var frisby = __importStar(require("frisby"));
+var Joi = frisby.Joi;
 describe('Test Case 1', function () {
     it('should be status 200', function (done) {
         frisby.get('https://reqres.in/api/users?page=2')
@@ -21,6 +22,7 @@ describe('Test Case 1', function () {
             .inspectRequestHeaders()
             .expect('status', 200)
             .expect('json', 'page', 2)
+            .expect('jsonTypes', 'page', Joi.number().required())
             .expect('jsonTypes', 'data.*', [
             {
                 "id": 4,
@@ -36,6 +38,13 @@ describe('Test Case 1', function () {
                 "id": 6,
                 "first_name": "Tracey",
                 "last_name": "Ramos"
+            }
+        ])
+            .expect('jsonTypes', 'data.*', [
+            {
+                "id": Joi.number().required(),
+                "first_name": Joi.string().required(),
+                "last_name": Joi.string().required()
             }
         ])
             .done(done);
