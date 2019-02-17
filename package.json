@@ -19,12 +19,13 @@
     "grunt-ts": "^6.0.0-beta.22",
     "jest": "^24.1.0",
     "jest-diff": "^24.0.0",
+    "jest-html-reporter": "^2.4.4",
+    "jest-json-reporter": "^1.2.2",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3"
   },
   "scripts": {
-    "test": "node ./node_modules/jest/node_modules/.bin/jest",
-    "build": "grunt"
+    "test": "./node_modules/jest/node_modules/.bin/jest --config=jest.config.json"
   },
   "author": "Prashanth Sams",
   "license": "ISC"
