@@ -10,5 +10,6 @@
         "includeFailureMsg": true,
         "includeConsoleLog": true
     }]
-  ]
+  ],
+  "testResultsProcessor": "jest-json-reporter"
 }
