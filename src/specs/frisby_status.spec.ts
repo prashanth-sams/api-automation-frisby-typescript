@@ -1,4 +1,5 @@
 import * as frisby from 'frisby';
+const Joi = frisby.Joi;
 
 describe('Test Case 1', () => {
     it('should be status 200', (done) => {
@@ -13,6 +14,7 @@ describe('Test Case 1', () => {
             .inspectRequestHeaders() // request headers
             .expect('status', 200) // assert status 200
             .expect('json','page', 2) // assert response body values
+            .expect('jsonTypes', 'page', Joi.number().required()) // validate data type
             .expect('jsonTypes','data.*', [
               {
                   "id": 4,
@@ -30,6 +32,13 @@ describe('Test Case 1', () => {
                   "last_name": "Ramos"
               }
             ]) // assert inner response body values
+            .expect('jsonTypes','data.*', [
+              {
+                  "id": Joi.number().required(),
+                  "first_name": Joi.string().required(),
+                  "last_name": Joi.string().required()
+              }
+            ]) // validate data types
             .done(done);
     });
 
