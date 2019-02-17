@@ -9,7 +9,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var frisby = __importStar(require("frisby"));
 var Joi = frisby.Joi;
-describe('Test Case 1', function () {
+describe('Test suite 1', function () {
     it('should be status 200', function (done) {
         frisby.get('https://reqres.in/api/users?page=2')
             .expect('status', 200)
@@ -52,6 +52,17 @@ describe('Test Case 1', function () {
     it('should be status 404', function (done) {
         frisby.get('https://reqres.in/api/users/23')
             .expect('status', 404)
+            .done(done);
+    });
+    it('post should return 201', function (done) {
+        frisby.post('https://reqres.in/api/users', {
+            'data': {
+                name: "Prashanth Sams",
+                movies: ["My Valentine", "Love you Jesus"]
+            }
+        })
+            .expect('status', 201)
+            .inspectJSON()
             .done(done);
     });
 });

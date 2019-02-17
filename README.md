@@ -7,6 +7,7 @@ grunt
 ```
 grunt run:commands
 ```
+<img src="https://i.imgur.com/hOzWJiF.png" width="40%" height="40%">
 <img src="https://i.imgur.com/VRlM5gr.png" width="40%" height="40%">
 
 ### Default TS compilation [optional]
