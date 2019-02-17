@@ -27,6 +27,9 @@
   "scripts": {
     "test": "./node_modules/jest/node_modules/.bin/jest --config=jest.config.json"
   },
+  "jestJsonReporter": {
+    "outputFile": "./reports/results.json"
+  },
   "author": "Prashanth Sams",
   "license": "ISC"
 }
