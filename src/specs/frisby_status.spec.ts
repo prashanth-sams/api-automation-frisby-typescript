@@ -13,7 +13,23 @@ describe('Test Case 1', () => {
             .inspectRequestHeaders() // request headers
             .expect('status', 200) // assert status 200
             .expect('json','page', 2) // assert response body values
-            // .expect('jsonTypes','page.*', 2) // assert inner response body values
+            .expect('jsonTypes','data.*', [
+              {
+                  "id": 4,
+                  "first_name": "Eve",
+                  "last_name": "Holt"
+              },
+              {
+                  "id": 5,
+                  "first_name": "Charles",
+                  "last_name": "Morris"
+              },
+              {
+                  "id": 6,
+                  "first_name": "Tracey",
+                  "last_name": "Ramos"
+              }
+            ]) // assert inner response body values
             .done(done);
     });
 

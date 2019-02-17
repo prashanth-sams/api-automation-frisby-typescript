@@ -21,6 +21,23 @@ describe('Test Case 1', function () {
             .inspectRequestHeaders()
             .expect('status', 200)
             .expect('json', 'page', 2)
+            .expect('jsonTypes', 'data.*', [
+            {
+                "id": 4,
+                "first_name": "Eve",
+                "last_name": "Holt"
+            },
+            {
+                "id": 5,
+                "first_name": "Charles",
+                "last_name": "Morris"
+            },
+            {
+                "id": 6,
+                "first_name": "Tracey",
+                "last_name": "Ramos"
+            }
+        ])
             .done(done);
     });
     it('should be status 404', function (done) {
