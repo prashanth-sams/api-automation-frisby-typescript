@@ -1,5 +1,5 @@
 ### GruntJS TS compilation
-- flush `build/` archives, compile `.ts` files under `src/`, and run specs
+- flush `build/` archives, compile `.ts` files under `src/`, run specs, and generate reports inside `reports/`
 ```
 grunt
 ```
