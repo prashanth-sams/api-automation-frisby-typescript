@@ -1,7 +1,7 @@
 {
   "verbose":true,
   "testMatch":["<rootDir>/**/*.spec.js"],
-  "testPathIgnorePatterns": ["<rootDir>/src/"],
+  "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/src/"],
   "reporters": [
     "default",
     ["./node_modules/jest-html-reporter", {
