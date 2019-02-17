@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     clean : {
-      output: './build/*'
+      output: ['./build/*', './reports/*']
     },
     ts: {
       default : {
@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     },
     run: {
     commands: {
-      exec: 'npm test build/',
+      exec: 'npm test',
       }
     }
   });

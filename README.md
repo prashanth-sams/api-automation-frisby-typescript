@@ -25,3 +25,4 @@ tsc src/specs/frisby_status.spec.ts --outDir build/
 ```
 npm test build/
 ```
+<img src="https://i.imgur.com/02IEgiU.png" width="80%" height="80%">
